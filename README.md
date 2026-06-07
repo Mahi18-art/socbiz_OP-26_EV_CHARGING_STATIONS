@@ -115,26 +115,36 @@ Stage 11: Results, Evaluation & Export
 ## Repository Structure
 
 ```
-ev-dynamic-pricing/
+socbiz_OP-26_EV_CHARGING_STATIONS/
 │
-├── README.md
-├── ev_pricing_enhanced.ipynb        ← Main notebook (all 16 stages)
+├── README.md                          ← Project documentation
+├── OPRN_PROJECT26_DECK.pdf            ← Presentation deck
 │
-├── data/
-│   └── README.md                    ← Download instructions
-│
-├── outputs/
-│   ├── stev_clean_export.csv        ← Preprocessed ST-EVCDP (2.13M rows)
-│   ├── acn_clean_export.csv         ← Preprocessed ACN sessions (14,991 rows)
-│   ├── final_feature_list.csv       ← 25 selected ML features
-│   ├── feature_vif_scores.csv       ← VIF scores for all candidate features
-│   └── high_correlation_pairs.csv   ← 37 high-correlation pairs (|r| > 0.85)
-│
-├── figures/                         ← All stage visualisations
-│
-└── models/
-    └── demand_prediction_agent.json ← Saved XGBoost model
+└── Submission/
+    ├── ev_pricing_enhanced.ipynb      ← Main notebook (all stages)
+    ├── acn_clean_export.csv           ← Preprocessed ACN sessions (14,991 rows)
+    ├── demand_agent_metrics.csv       ← Demand prediction evaluation metrics
+    ├── high_correlation_pairs.csv     ← 37 high-correlation feature pairs (|r| > 0.85)
+    ├── master_kpi_summary.csv         ← Consolidated KPI summary across all agents
+    ├── monitoring_agent_kpis.csv      ← Episode-level monitoring KPIs (50 episodes)
+    ├── monitoring_episode_log.csv     ← Detailed monitoring agent episode log
+    ├── psi_drift_report.csv           ← PSI drift detection report (PSI = 0.0092)
+    └── tariff_agent_kpis.csv          ← Tariff agent pricing outcomes
 ```
+
+### Large Files — Google Drive
+
+Three output files exceed GitHub's size limit and are hosted on Google Drive:
+
+> 📁 **[Download Large Output Files](https://drive.google.com/drive/folders/1WBD5JWX9Vt-bD6_mnqEsM1Hw4bDpBW6J?usp=drive_link)**
+
+| File | Description | Size |
+|------|-------------|------|
+| `stev_clean_export.csv` | Preprocessed ST-EVCDP — 2,134,080 rows × 35 columns | Large |
+| `final_feature_list.csv` | 25 selected ML features with category labels | Small* |
+| `feature_vif_scores.csv` | VIF scores for all 20 candidate features | Small* |
+
+> *These are small files but hosted together for convenience.
 
 ---
 
@@ -142,8 +152,8 @@ ev-dynamic-pricing/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/ev-dynamic-pricing.git
-cd ev-dynamic-pricing
+git clone https://github.com/Mahi18-art/socbiz_OP-26_EV_CHARGING_STATIONS.git
+cd socbiz_OP-26_EV_CHARGING_STATIONS
 ```
 
 2. **Install dependencies**
@@ -154,13 +164,13 @@ pip install pandas numpy polars xgboost scikit-learn matplotlib seaborn scipy
 3. **Download data**
 - ACN-Data: [ev.caltech.edu/dataset.html](https://ev.caltech.edu/dataset.html)
 - ST-EVCDP: [github.com/IntelligentSystemsLab/ST-EVCDP](https://github.com/IntelligentSystemsLab/ST-EVCDP)
-- Place all raw files in `/data` folder
+- Large outputs: [Google Drive](https://drive.google.com/drive/folders/1WBD5JWX9Vt-bD6_mnqEsM1Hw4bDpBW6J?usp=drive_link)
 
 4. **Run the notebook**
 ```bash
-jupyter notebook ev_pricing_enhanced.ipynb
+jupyter notebook Submission/ev_pricing_enhanced.ipynb
 ```
-> Run all cells sequentially (Stages 1–11). Total runtime: ~15–20 minutes on standard hardware.
+> Run all cells sequentially. Total runtime: ~15–20 minutes on standard hardware.
 
 ---
 
