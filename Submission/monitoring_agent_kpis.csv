@@ -1,0 +1,8 @@
+kpi,value,unit
+Total Episodes,50,count
+Real Episodes,6,count
+Simulated Episodes,44,count
+Final Wait Reduction,21.735154934344237,%
+Final Response Rate,38.547635488216216,%
+PSI,0.009228963988439537,index
+PSI Status, STABLE,label

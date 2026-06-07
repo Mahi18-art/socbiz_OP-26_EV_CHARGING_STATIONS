@@ -1,0 +1,11 @@
+agent,kpi,value,unit
+Demand Prediction,RMSE,0.014374972352650478,utilisation (0-1)
+Demand Prediction,MAE,0.005909200757741928,utilisation (0-1)
+Demand Prediction,R²,0.9933919310569763,coefficient
+Tariff Pricing,Revenue Gain %,0.5417552425380748,%
+Tariff Pricing,CUR Improvement,0.4677030724719515,%
+Tariff Pricing,Off-Peak Uplift,21.835710959657963,%
+Monitoring,Episodes Total,50.0,count
+Monitoring,Wait Reduction,21.735154934344237,%
+Monitoring,Response Rate,38.547635488216216,%
+Monitoring,PSI,0.009228963988439537,index

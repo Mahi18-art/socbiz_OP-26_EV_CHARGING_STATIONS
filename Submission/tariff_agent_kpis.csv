@@ -1,0 +1,4 @@
+kpi,value,unit,baseline
+Revenue Gain %,0.5417552425380748,%,fixed ₹15/kWh
+CUR Improvement,0.4677030724719515,%,pre-dynamic CUR
+Off-Peak Uplift,21.835710959657963,%,sessions < 30% util baseline
