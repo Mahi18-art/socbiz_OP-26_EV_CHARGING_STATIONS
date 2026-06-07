@@ -41,7 +41,7 @@ Stage 7: Multicollinearity Resolution (VIF + Correlation)
 │  Agent 3: Monitoring & Learning           │
 └───────────────────────────────────────────┘
         ↓
-Stage 16: Results, Evaluation & Export
+Stage 11: Results, Evaluation & Export
 ```
 
 ---
@@ -160,7 +160,7 @@ pip install pandas numpy polars xgboost scikit-learn matplotlib seaborn scipy
 ```bash
 jupyter notebook ev_pricing_enhanced.ipynb
 ```
-> Run all cells sequentially (Stages 1–16). Total runtime: ~15–20 minutes on standard hardware.
+> Run all cells sequentially (Stages 1–11). Total runtime: ~15–20 minutes on standard hardware.
 
 ---
 
